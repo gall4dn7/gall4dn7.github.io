@@ -1,0 +1,1591 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8度影院 - 企业级视频品牌官网_光影内容社区</title>
+<meta name="description" content="8度影院官方网站，深耕影像内容领域的视频品牌平台，汇聚原创影像、创作者社区与精品专题，为用户打造值得信赖的高品质内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101828'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23f0a043' stroke-width='3'/%3E%3Cpath d='M27 25l12 7-12 7z' fill='%23f0a043'/%3E%3C/svg%3E">
+<style>
+:root{
+  --e8-bg:#0e1522;
+  --e8-bg-2:#121b2b;
+  --e8-panel:#162134;
+  --e8-panel-2:#1b2941;
+  --e8-line:rgba(255,255,255,.09);
+  --e8-line-2:rgba(255,255,255,.16);
+  --e8-text:#e9eef7;
+  --e8-muted:#93a2ba;
+  --e8-dim:#6f7f99;
+  --e8-glow:#4ad8c7;
+  --e8-glow-2:#7cf0e2;
+  --e8-amber:#f0a043;
+  --e8-rose:#f2688c;
+  --e8-violet:#9b8cff;
+  --e8-r:14px;
+  --e8-hdr:64px;
+  --e8-bar:40px;
+  --e8-shadow:0 18px 44px -18px rgba(0,0,0,.7);
+  --e8-font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(1100px 520px at 82% -8%,rgba(74,216,199,.14),transparent 62%),
+    radial-gradient(900px 480px at 6% 4%,rgba(155,140,255,.13),transparent 60%),
+    var(--e8-bg);
+  color:var(--e8-text);
+  font-family:var(--e8-font);
+  font-size:16px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+h1,h2,h3,h4{line-height:1.3;font-weight:700}
+.e8-wrap{width:min(1200px,92vw);margin:0 auto}
+.e8-sec{padding:64px 0;scroll-margin-top:calc(var(--e8-hdr) + var(--e8-bar) + 16px)}
+.e8-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.e8-sec-tag{font-size:12px;letter-spacing:.22em;color:var(--e8-glow);text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.e8-sec-tag::before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--e8-glow),transparent)}
+.e8-sec-head h2{font-size:clamp(23px,3vw,32px);margin-top:8px;letter-spacing:.01em}
+.e8-sec-head h2 em{font-style:normal;color:var(--e8-glow-2)}
+.e8-sec-desc{color:var(--e8-muted);font-size:14.5px;max-width:460px}
+.e8-btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 22px;font-size:14.5px;font-weight:600;transition:.25s;border:1px solid transparent;white-space:nowrap}
+.e8-btn-main{background:linear-gradient(120deg,var(--e8-glow),var(--e8-glow-2));color:#06201d;box-shadow:0 10px 26px -10px rgba(74,216,199,.7)}
+.e8-btn-main:hover{transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(74,216,199,.85)}
+.e8-btn-ghost{border-color:var(--e8-line-2);color:var(--e8-text)}
+.e8-btn-ghost:hover{border-color:var(--e8-glow);color:var(--e8-glow-2);background:rgba(74,216,199,.06)}
+.e8-btn-sm{padding:7px 15px;font-size:13px}
+
+/* ===== 吸顶区：公告条 + 页头 ===== */
+.e8-sticky{position:sticky;top:0;z-index:60}
+.e8-bar{height:var(--e8-bar);display:flex;align-items:center;background:linear-gradient(90deg,#123a39,#0f2a3a 55%,#181f33);border-bottom:1px solid var(--e8-line);font-size:13px;overflow:hidden}
+.e8-bar .e8-wrap{display:flex;align-items:center;gap:14px;height:100%}
+.e8-bar-label{flex:none;background:rgba(240,160,67,.16);color:var(--e8-amber);border:1px solid rgba(240,160,67,.4);border-radius:999px;padding:1px 10px;font-size:11.5px;font-weight:700;letter-spacing:.1em}
+.e8-bar-ticker{flex:1;overflow:hidden;white-space:nowrap;color:#cfe4e0}
+.e8-bar-track{display:inline-flex;gap:44px;animation:e8tick 32s linear infinite}
+.e8-bar-track b{color:var(--e8-glow-2);font-weight:700}
+.e8-bar-link{flex:none;color:var(--e8-amber);font-weight:600;border-bottom:1px dashed rgba(240,160,67,.5)}
+@keyframes e8tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.e8-bar-track{animation:none}}
+
+.e8-header{height:var(--e8-hdr);background:rgba(14,21,34,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--e8-line)}
+.e8-header .e8-wrap{height:100%;display:flex;align-items:center;gap:22px}
+.e8-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.02em}
+.e8-logo-mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(140deg,#1b3f4d,#101c2c);border:1px solid rgba(74,216,199,.45);display:grid;place-items:center;position:relative;box-shadow:inset 0 0 18px rgba(74,216,199,.22)}
+.e8-logo-mark::after{content:"";width:0;height:0;border-left:9px solid var(--e8-glow-2);border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:2px}
+.e8-logo small{display:block;font-size:10px;font-weight:500;color:var(--e8-dim);letter-spacing:.24em}
+.e8-nav{display:flex;align-items:center;gap:4px;margin-left:8px;flex:1}
+.e8-nav a{font-size:14.5px;color:var(--e8-muted);padding:8px 12px;border-radius:9px;transition:.2s}
+.e8-nav a:hover{color:var(--e8-glow-2);background:rgba(74,216,199,.08)}
+.e8-header-tools{display:flex;align-items:center;gap:10px}
+.e8-search{position:relative;display:flex;align-items:center}
+.e8-search input{width:210px;height:38px;border-radius:999px;border:1px solid var(--e8-line-2);background:rgba(255,255,255,.04);color:var(--e8-text);padding:0 40px 0 16px;font-size:13.5px;outline:none;transition:.25s}
+.e8-search input::placeholder{color:var(--e8-dim)}
+.e8-search input:focus{width:250px;border-color:var(--e8-glow);background:rgba(74,216,199,.07)}
+.e8-search button{position:absolute;right:6px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:var(--e8-glow-2)}
+.e8-search button:hover{background:rgba(74,216,199,.15)}
+.e8-search-hint{position:absolute;top:46px;right:0;width:290px;background:var(--e8-panel-2);border:1px solid var(--e8-line-2);border-radius:12px;padding:10px;box-shadow:var(--e8-shadow);display:none;z-index:70}
+.e8-search-hint.show{display:block}
+.e8-search-hint p{font-size:12px;color:var(--e8-dim);margin-bottom:6px;letter-spacing:.06em}
+.e8-chip-row{display:flex;flex-wrap:wrap;gap:6px}
+.e8-chip{font-size:12.5px;padding:4px 11px;border-radius:999px;background:rgba(74,216,199,.09);color:var(--e8-glow-2);border:1px solid rgba(74,216,199,.24)}
+.e8-chip:hover{background:rgba(74,216,199,.2)}
+.e8-burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--e8-line-2);align-items:center;justify-content:center;flex-direction:column;gap:4px}
+.e8-burger span{width:18px;height:2px;background:var(--e8-text);border-radius:2px;transition:.25s}
+.e8-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.e8-burger.open span:nth-child(2){opacity:0}
+.e8-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.e8-mnav{display:none;background:var(--e8-bg-2);border-bottom:1px solid var(--e8-line)}
+.e8-mnav.open{display:block}
+.e8-mnav ul{list-style:none;padding:8px 4vw 18px}
+.e8-mnav li a{display:block;padding:12px 10px;border-bottom:1px solid var(--e8-line);font-size:15px;color:var(--e8-muted)}
+.e8-mnav li a:hover{color:var(--e8-glow-2)}
+
+/* ===== 首屏 ===== */
+.e8-hero{position:relative;padding:52px 0 40px;overflow:hidden}
+.e8-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.e8-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(74,216,199,.35);background:rgba(74,216,199,.08);color:var(--e8-glow-2);font-size:12.5px;font-weight:600;letter-spacing:.08em;border-radius:999px;padding:5px 14px}
+.e8-badge i{width:6px;height:6px;border-radius:50%;background:var(--e8-glow);box-shadow:0 0 0 4px rgba(74,216,199,.18)}
+.e8-hero h1{font-size:clamp(40px,6.4vw,68px);font-weight:800;letter-spacing:.02em;margin:18px 0 6px;line-height:1.08;background:linear-gradient(100deg,#ffffff 20%,#b7f4ec 60%,#8fd8ff 96%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.e8-hero-slogan{font-size:clamp(16px,2vw,20px);color:var(--e8-glow-2);font-weight:600;letter-spacing:.04em}
+.e8-hero-lead{color:var(--e8-muted);font-size:15px;margin:16px 0 22px;max-width:560px}
+.e8-hero-lead strong{color:var(--e8-text);font-weight:700}
+.e8-hero-acts{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.e8-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border-top:1px solid var(--e8-line);padding-top:20px;max-width:540px}
+.e8-stats b{display:block;font-size:clamp(21px,2.6vw,27px);color:#fff;letter-spacing:.01em}
+.e8-stats b span{font-size:13px;color:var(--e8-dim);font-weight:500;margin-left:3px}
+.e8-stats small{font-size:12.5px;color:var(--e8-muted);letter-spacing:.04em}
+.e8-hero-visual{position:relative}
+.e8-frame{border-radius:20px;overflow:hidden;border:1px solid var(--e8-line-2);box-shadow:var(--e8-shadow);position:relative;aspect-ratio:16/10;background:var(--e8-panel)}
+.e8-frame img{width:100%;height:100%;object-fit:cover}
+.e8-frame-cap{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(transparent,rgba(6,12,20,.92))}
+.e8-frame-cap h3{font-size:16.5px}
+.e8-frame-cap p{font-size:12.5px;color:var(--e8-muted);margin-top:2px}
+.e8-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:rgba(10,20,30,.45);backdrop-filter:blur(4px);display:grid;place-items:center;transition:.25s}
+.e8-play::after{content:"";width:0;height:0;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.e8-play:hover{background:var(--e8-glow);border-color:var(--e8-glow);box-shadow:0 0 0 10px rgba(74,216,199,.18)}
+.e8-hero-mini{display:flex;gap:12px;margin-top:14px}
+.e8-hero-mini figure{flex:1;border-radius:12px;overflow:hidden;border:1px solid var(--e8-line);position:relative;aspect-ratio:16/9;background:var(--e8-panel)}
+.e8-hero-mini img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.e8-hero-mini figure:hover img{transform:scale(1.06)}
+.e8-hero-mini figcaption{position:absolute;left:0;bottom:0;right:0;font-size:11.5px;padding:18px 9px 7px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#dfe8f3}
+.e8-float-tag{position:absolute;right:-8px;top:-14px;background:linear-gradient(120deg,var(--e8-amber),#f6c27a);color:#2a1704;font-size:12px;font-weight:800;padding:7px 14px;border-radius:10px;transform:rotate(3deg);box-shadow:0 12px 24px -12px rgba(240,160,67,.9)}
+
+/* ===== 深度解析 ===== */
+.e8-about{background:linear-gradient(180deg,rgba(21,32,50,.55),rgba(14,21,34,0));border-top:1px solid var(--e8-line);border-bottom:1px solid var(--e8-line)}
+.e8-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+.e8-prose p{color:#b9c6d9;font-size:15px;margin-bottom:16px;text-align:justify}
+.e8-prose p strong{color:var(--e8-glow-2);font-weight:700}
+.e8-prose h3{font-size:17.5px;margin:22px 0 10px;padding-left:12px;border-left:3px solid var(--e8-glow);color:#fff}
+.e8-side-card{background:var(--e8-panel);border:1px solid var(--e8-line);border-radius:var(--e8-r);padding:22px;margin-bottom:16px}
+.e8-side-card h4{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.e8-side-card h4::before{content:"";width:8px;height:8px;background:var(--e8-amber);border-radius:2px;transform:rotate(45deg)}
+.e8-rule-list{list-style:none;display:grid;gap:10px}
+.e8-rule-list li{font-size:13.5px;color:var(--e8-muted);padding-left:20px;position:relative}
+.e8-rule-list li::before{content:"✓";position:absolute;left:0;color:var(--e8-glow);font-weight:700}
+.e8-gradebar{display:flex;align-items:center;gap:10px;margin-top:14px}
+.e8-gradebar span{font-size:12px;color:var(--e8-dim);width:58px;flex:none}
+.e8-gradebar i{flex:1;height:7px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;position:relative;display:block}
+.e8-gradebar i::after{content:"";position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:linear-gradient(90deg,var(--e8-glow),var(--e8-glow-2))}
+.e8-gradebar i.g70::after{width:70%}
+.e8-gradebar i.g85::after{width:85%}
+.e8-gradebar i.g92::after{width:92%}
+.e8-gradebar b{font-size:12.5px;color:var(--e8-glow-2);width:36px;text-align:right}
+
+/* ===== 焦点内容 ===== */
+.e8-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.e8-card{background:var(--e8-panel);border:1px solid var(--e8-line);border-radius:var(--e8-r);overflow:hidden;transition:.3s;position:relative;display:flex;flex-direction:column}
+.e8-card:hover{transform:translateY(-4px);border-color:rgba(74,216,199,.45);box-shadow:0 22px 44px -22px rgba(0,0,0,.85)}
+.e8-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--e8-panel-2)}
+.e8-thumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.e8-card:hover .e8-thumb img{transform:scale(1.05)}
+.e8-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(6,12,20,.72))}
+.e8-thumb-tag{position:absolute;top:10px;left:10px;z-index:2;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:6px;background:rgba(6,12,20,.7);color:var(--e8-glow-2);border:1px solid rgba(74,216,199,.35);backdrop-filter:blur(4px)}
+.e8-thumb-dur{position:absolute;bottom:10px;right:10px;z-index:2;font-size:11.5px;padding:2px 8px;border-radius:5px;background:rgba(0,0,0,.68);color:#e6eef8}
+.e8-thumb-play{position:absolute;inset:0;z-index:2;display:grid;place-items:center;opacity:0;transition:.3s}
+.e8-card:hover .e8-thumb-play{opacity:1}
+.e8-thumb-play i{width:48px;height:48px;border-radius:50%;background:rgba(74,216,199,.9);display:grid;place-items:center;box-shadow:0 0 0 8px rgba(74,216,199,.2)}
+.e8-thumb-play i::after{content:"";width:0;height:0;border-left:13px solid #06201d;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
+.e8-card-body{padding:15px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.e8-card-body h3{font-size:16px;line-height:1.45}
+.e8-card-body h3 a:hover{color:var(--e8-glow-2)}
+.e8-card-body p{font-size:13px;color:var(--e8-muted);line-height:1.65;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.e8-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--e8-dim);flex-wrap:wrap}
+.e8-meta .e8-author{display:inline-flex;align-items:center;gap:6px;color:var(--e8-muted)}
+.e8-ava{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;color:#06201d;flex:none}
+.e8-card-foot{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:8px;border-top:1px dashed var(--e8-line)}
+.e8-act{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;color:var(--e8-dim);padding:4px 9px;border-radius:7px;transition:.2s}
+.e8-act:hover{color:var(--e8-glow-2);background:rgba(74,216,199,.08)}
+.e8-act.on{color:var(--e8-rose)}
+.e8-act.on svg{fill:var(--e8-rose)}
+.e8-act svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8}
+.e8-act.on svg{stroke:var(--e8-rose)}
+.e8-focus-main .e8-card-body h3{font-size:20px}
+.e8-focus-side{display:grid;gap:18px;grid-template-rows:1fr 1fr}
+.e8-focus-side .e8-card{flex-direction:row}
+.e8-focus-side .e8-thumb{width:44%;flex:none;aspect-ratio:auto}
+.e8-focus-side .e8-card-body{padding:13px 14px}
+
+/* ===== 热门视频流 ===== */
+.e8-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.e8-tab{font-size:13.5px;padding:7px 16px;border-radius:999px;border:1px solid var(--e8-line-2);color:var(--e8-muted);transition:.2s}
+.e8-tab:hover{color:var(--e8-glow-2);border-color:rgba(74,216,199,.5)}
+.e8-tab.active{background:rgba(74,216,199,.14);border-color:var(--e8-glow);color:var(--e8-glow-2);font-weight:600}
+.e8-vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.e8-vcard .e8-card-body h3{font-size:15px}
+.e8-vcard.hide{display:none}
+.e8-empty{display:none;text-align:center;color:var(--e8-muted);font-size:14px;padding:30px 0;border:1px dashed var(--e8-line-2);border-radius:var(--e8-r)}
+.e8-empty.show{display:block}
+
+/* ===== 专题 ===== */
+.e8-special{background:linear-gradient(180deg,rgba(18,27,43,.85),rgba(14,21,34,0));border-top:1px solid var(--e8-line);border-bottom:1px solid var(--e8-line)}
+.e8-sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.e8-sp{position:relative;border-radius:var(--e8-r);overflow:hidden;border:1px solid var(--e8-line);min-height:250px;display:flex;align-items:flex-end;transition:.3s}
+.e8-sp:hover{transform:translateY(-4px);border-color:rgba(155,140,255,.6);box-shadow:0 24px 44px -22px rgba(0,0,0,.9)}
+.e8-sp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.e8-sp:hover img{transform:scale(1.06)}
+.e8-sp::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 18%,rgba(8,12,22,.93))}
+.e8-sp-in{position:relative;z-index:2;padding:18px;width:100%}
+.e8-sp-state{position:absolute;top:12px;left:12px;z-index:3;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:6px}
+.e8-sp-state.live{background:rgba(242,104,140,.2);color:#ffa8c0;border:1px solid rgba(242,104,140,.5)}
+.e8-sp-state.done{background:rgba(255,255,255,.08);color:#c8d4e6;border:1px solid var(--e8-line-2)}
+.e8-sp-state.up{background:rgba(74,216,199,.16);color:var(--e8-glow-2);border:1px solid rgba(74,216,199,.45)}
+.e8-sp-in h3{font-size:17px;margin-bottom:6px}
+.e8-sp-in p{font-size:12.5px;color:#aebcd0;line-height:1.65}
+.e8-sp-in .e8-sp-meta{font-size:11.5px;color:var(--e8-dim);margin-top:9px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* ===== 创作者 ===== */
+.e8-cre-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.e8-cre{background:var(--e8-panel);border:1px solid var(--e8-line);border-radius:var(--e8-r);padding:22px 18px;text-align:center;transition:.3s;position:relative;overflow:hidden}
+.e8-cre::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--e8-glow),var(--e8-violet),var(--e8-amber));opacity:.75}
+.e8-cre:hover{transform:translateY(-4px);border-color:rgba(155,140,255,.5)}
+.e8-cre-ava{width:66px;height:66px;border-radius:20px;margin:0 auto 12px;display:grid;place-items:center;font-size:23px;font-weight:800;color:#071019;position:relative}
+.e8-cre-ava::after{content:"";position:absolute;inset:-5px;border-radius:24px;border:1px dashed rgba(255,255,255,.22)}
+.e8-cre h3{font-size:15.5px}
+.e8-cre .e8-cre-field{font-size:12px;color:var(--e8-glow-2);letter-spacing:.06em;margin:3px 0 9px}
+.e8-cre p{font-size:12.5px;color:var(--e8-muted);line-height:1.65;margin-bottom:12px;min-height:42px}
+.e8-cre-stats{display:flex;justify-content:center;gap:14px;font-size:11.5px;color:var(--e8-dim);border-top:1px dashed var(--e8-line);padding-top:10px}
+.e8-cre-stats b{color:var(--e8-text);font-size:13.5px;display:block}
+.e8-cre .e8-btn{margin-top:12px}
+
+/* ===== 故事随笔 + 榜单 ===== */
+.e8-story-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:34px}
+.e8-note{padding:16px 0;border-bottom:1px dashed var(--e8-line)}
+.e8-note:last-child{border-bottom:none}
+.e8-note h3{font-size:16.5px;margin-bottom:7px}
+.e8-note h3 a:hover{color:var(--e8-glow-2)}
+.e8-note .e8-meta{margin-bottom:6px}
+.e8-note p{font-size:13.5px;color:#a9b7ca;text-align:justify}
+.e8-rank{background:var(--e8-panel);border:1px solid var(--e8-line);border-radius:var(--e8-r);padding:20px}
+.e8-rank h3{font-size:16px;margin-bottom:4px}
+.e8-rank-sub{font-size:12px;color:var(--e8-dim);margin-bottom:14px}
+.e8-rank ol{list-style:none;display:grid;gap:4px}
+.e8-rank li a{display:flex;align-items:center;gap:10px;padding:9px 8px;border-radius:9px;transition:.2s;font-size:13.5px}
+.e8-rank li a:hover{background:rgba(74,216,199,.08);color:var(--e8-glow-2)}
+.e8-rank .e8-rk{width:20px;text-align:center;font-weight:800;font-size:13px;color:var(--e8-dim);flex:none}
+.e8-rank li:nth-child(1) .e8-rk{color:var(--e8-amber)}
+.e8-rank li:nth-child(2) .e8-rk{color:#cdd9e8}
+.e8-rank li:nth-child(3) .e8-rk{color:#c08a63}
+.e8-rank .e8-rk-t{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.e8-rank .e8-rk-n{font-size:11.5px;color:var(--e8-dim);flex:none}
+
+/* ===== 评价 ===== */
+.e8-review{background:linear-gradient(180deg,rgba(24,25,45,.7),rgba(14,21,34,0));border-top:1px solid var(--e8-line);border-bottom:1px solid var(--e8-line)}
+.e8-bubbles{columns:3;column-gap:16px}
+.e8-bubble{break-inside:avoid;background:var(--e8-panel);border:1px solid var(--e8-line);border-radius:var(--e8-r);padding:16px;margin-bottom:16px;transition:.25s}
+.e8-bubble:hover{border-color:rgba(74,216,199,.4);transform:translateY(-2px)}
+.e8-bubble-top{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.e8-bubble-top .e8-ava{width:30px;height:30px;font-size:12.5px;border-radius:10px}
+.e8-bubble-top b{font-size:13.5px;display:block;line-height:1.2}
+.e8-bubble-top span{font-size:11px;color:var(--e8-dim)}
+.e8-bubble p{font-size:13px;color:#b6c3d6;line-height:1.72}
+.e8-bubble .e8-bubble-topic{display:inline-block;margin-top:9px;font-size:11px;color:var(--e8-glow-2);background:rgba(74,216,199,.1);padding:2px 8px;border-radius:5px}
+
+/* ===== 动态 + FAQ ===== */
+.e8-two-col{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.e8-timeline{position:relative;padding-left:22px}
+.e8-timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--e8-glow),rgba(74,216,199,.05))}
+.e8-tl-item{position:relative;padding-bottom:18px}
+.e8-tl-item::before{content:"";position:absolute;left:-22px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--e8-bg);border:2px solid var(--e8-glow)}
+.e8-tl-item small{font-size:11.5px;color:var(--e8-glow);letter-spacing:.08em}
+.e8-tl-item h3{font-size:14.5px;margin:3px 0 4px}
+.e8-tl-item p{font-size:12.5px;color:var(--e8-muted);line-height:1.65}
+.e8-faq details{border:1px solid var(--e8-line);border-radius:11px;margin-bottom:9px;background:rgba(255,255,255,.02);overflow:hidden;transition:.2s}
+.e8-faq details[open]{border-color:rgba(74,216,199,.4);background:rgba(74,216,199,.05)}
+.e8-faq summary{list-style:none;cursor:pointer;padding:13px 40px 13px 15px;font-size:14px;font-weight:600;position:relative}
+.e8-faq summary::-webkit-details-marker{display:none}
+.e8-faq summary::after{content:"+";position:absolute;right:15px;top:50%;transform:translateY(-50%);color:var(--e8-glow);font-size:19px;font-weight:400;transition:.2s}
+.e8-faq details[open] summary::after{content:"−"}
+.e8-faq p{font-size:13px;color:var(--e8-muted);padding:0 15px 14px;line-height:1.75}
+
+/* ===== 联系/投稿 ===== */
+.e8-join{position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(74,216,199,.35);background:linear-gradient(120deg,rgba(74,216,199,.14),rgba(155,140,255,.12) 55%,rgba(240,160,67,.12));padding:38px}
+.e8-join-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+.e8-join h2{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
+.e8-join p{font-size:14px;color:#c3d0e2;margin-bottom:18px;max-width:520px}
+.e8-join-form{display:flex;gap:10px;flex-wrap:wrap}
+.e8-join-form input,.e8-join-form select{height:44px;border-radius:10px;border:1px solid var(--e8-line-2);background:rgba(9,16,26,.6);color:var(--e8-text);padding:0 14px;font-size:14px;outline:none;flex:1;min-width:150px}
+.e8-join-form input:focus,.e8-join-form select:focus{border-color:var(--e8-glow)}
+.e8-join-info{background:rgba(9,16,26,.55);border:1px solid var(--e8-line);border-radius:14px;padding:18px}
+.e8-join-info ul{list-style:none;display:grid;gap:10px}
+.e8-join-info li{font-size:13px;color:var(--e8-muted);display:flex;gap:9px;align-items:flex-start}
+.e8-join-info li b{color:var(--e8-glow-2);flex:none;font-size:12.5px}
+
+/* ===== 页脚 ===== */
+.e8-footer{background:#0a111c;border-top:1px solid var(--e8-line);padding:48px 0 26px;margin-top:20px}
+.e8-foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:30px;margin-bottom:30px}
+.e8-foot-brand p{font-size:13px;color:var(--e8-dim);margin:12px 0 14px;max-width:320px;line-height:1.75}
+.e8-foot-col h4{font-size:13.5px;margin-bottom:12px;color:#dfe8f4;letter-spacing:.05em}
+.e8-foot-col ul{list-style:none;display:grid;gap:8px}
+.e8-foot-col a,.e8-foot-col li{font-size:12.5px;color:var(--e8-dim);transition:.2s}
+.e8-foot-col a:hover{color:var(--e8-glow-2)}
+.e8-foot-bottom{border-top:1px solid var(--e8-line);padding-top:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#5d6c83}
+.e8-foot-bottom .e8-foot-links{display:flex;gap:16px;flex-wrap:wrap}
+.e8-foot-bottom a:hover{color:var(--e8-glow-2)}
+.e8-social{display:flex;gap:8px;margin-top:12px}
+.e8-social span{width:32px;height:32px;border-radius:9px;border:1px solid var(--e8-line-2);display:grid;place-items:center;font-size:11px;color:var(--e8-muted);transition:.2s;cursor:pointer}
+.e8-social span:hover{border-color:var(--e8-glow);color:var(--e8-glow-2)}
+
+/* ===== 回到顶部 / Toast ===== */
+.e8-top{position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:13px;background:var(--e8-panel-2);border:1px solid var(--e8-line-2);display:grid;place-items:center;color:var(--e8-glow-2);opacity:0;pointer-events:none;transform:translateY(10px);transition:.3s;z-index:80}
+.e8-top.show{opacity:1;pointer-events:auto;transform:none}
+.e8-top:hover{background:var(--e8-glow);color:#06201d;border-color:var(--e8-glow)}
+.e8-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:rgba(20,32,48,.97);border:1px solid rgba(74,216,199,.5);color:var(--e8-glow-2);font-size:13.5px;padding:10px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:120;box-shadow:var(--e8-shadow);white-space:nowrap}
+.e8-toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ===== 弹窗 ===== */
+.e8-modal{position:fixed;inset:0;background:rgba(4,8,14,.74);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px;z-index:110}
+.e8-modal.open{display:flex}
+.e8-modal-box{width:min(520px,94vw);background:var(--e8-panel);border:1px solid var(--e8-line-2);border-radius:18px;padding:24px;box-shadow:var(--e8-shadow);max-height:86vh;overflow:auto;animation:e8pop .25s ease}
+@keyframes e8pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.e8-modal-box h3{font-size:17px;margin-bottom:4px}
+.e8-modal-box .e8-modal-sub{font-size:12.5px;color:var(--e8-dim);margin-bottom:16px}
+.e8-modal-box .e8-field{margin-bottom:12px}
+.e8-modal-box label{display:block;font-size:12.5px;color:var(--e8-muted);margin-bottom:5px}
+.e8-modal-box input,.e8-modal-box textarea,.e8-modal-box select{width:100%;border-radius:9px;border:1px solid var(--e8-line-2);background:rgba(9,16,26,.65);color:var(--e8-text);padding:10px 12px;font-size:13.5px;outline:none;font-family:inherit}
+.e8-modal-box textarea{min-height:88px;resize:vertical}
+.e8-modal-box input:focus,.e8-modal-box textarea:focus,.e8-modal-box select:focus{border-color:var(--e8-glow)}
+.e8-modal-acts{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.e8-modal-close{position:absolute;right:16px;top:14px;font-size:20px;color:var(--e8-dim)}
+.e8-modal-wrap{position:relative}
+.e8-dialog{display:flex;gap:12px;padding:12px 0;border-bottom:1px dashed var(--e8-line)}
+.e8-dialog:last-child{border-bottom:none}
+.e8-dialog .e8-ava{width:34px;height:34px;border-radius:11px;font-size:13px;flex:none}
+.e8-dialog b{font-size:13.5px;display:block}
+.e8-dialog span{font-size:11px;color:var(--e8-dim)}
+.e8-dialog p{font-size:13px;color:#b6c3d6;margin-top:2px}
+.e8-share-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px}
+.e8-share-row button{border:1px solid var(--e8-line-2);border-radius:11px;padding:14px 6px;font-size:12.5px;color:var(--e8-muted);transition:.2s;background:rgba(255,255,255,.02)}
+.e8-share-row button:hover{border-color:var(--e8-glow);color:var(--e8-glow-2)}
+
+/* ===== 响应式 ===== */
+@media (max-width:1000px){
+  .e8-hero-grid,.e8-about-grid,.e8-story-grid,.e8-two-col,.e8-join-grid{grid-template-columns:1fr}
+  .e8-focus-grid{grid-template-columns:1fr}
+  .e8-focus-side{grid-template-rows:auto}
+  .e8-vgrid,.e8-sp-grid{grid-template-columns:repeat(2,1fr)}
+  .e8-cre-grid{grid-template-columns:repeat(2,1fr)}
+  .e8-foot-grid{grid-template-columns:1fr 1fr}
+  .e8-bubbles{columns:2}
+}
+@media (max-width:820px){
+  .e8-nav{display:none}
+  .e8-burger{display:flex}
+  .e8-search input{width:150px}
+  .e8-search input:focus{width:180px}
+  .e8-search-hint{width:260px}
+}
+@media (max-width:640px){
+  .e8-sec{padding:46px 0}
+  .e8-vgrid,.e8-sp-grid,.e8-cre-grid{grid-template-columns:1fr}
+  .e8-bubbles{columns:1}
+  .e8-focus-side .e8-card{flex-direction:column}
+  .e8-focus-side .e8-thumb{width:100%;aspect-ratio:16/9}
+  .e8-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .e8-bar{font-size:12px}
+  .e8-bar-link{display:none}
+  .e8-join{padding:24px}
+  .e8-foot-grid{grid-template-columns:1fr}
+  .e8-search-hint{right:auto;left:0}
+  .e8-hero-mini figcaption{font-size:10.5px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="e8-sticky">
+  <div class="e8-bar" id="e8Bar">
+    <div class="e8-wrap">
+      <span class="e8-bar-label">官方公告</span>
+      <div class="e8-bar-ticker">
+        <div class="e8-bar-track" id="e8BarTrack">
+          <span>11月19日 <b>「城市夜行者」专题第四期</b> 已更新，新增 6 支实拍短片与创作手记</span>
+          <span>《光的切片》系列第 9 集上线，<b>主创访谈同步发布</b></span>
+          <span>创作者招募开放报名中，本期主题「我的日常 24 帧」</span>
+          <span>企业动态：8度影院与 5 家影像工作室达成内容共建合作</span>
+          <span>11月19日 <b>「城市夜行者」专题第四期</b> 已更新，新增 6 支实拍短片与创作手记</span>
+          <span>《光的切片》系列第 9 集上线，<b>主创访谈同步发布</b></span>
+          <span>创作者招募开放报名中，本期主题「我的日常 24 帧」</span>
+          <span>企业动态：8度影院与 5 家影像工作室达成内容共建合作</span>
+        </div>
+      </div>
+      <a class="e8-bar-link" href="#e8-join">投稿入口 →</a>
+    </div>
+  </div>
+
+  <header class="e8-header">
+    <div class="e8-wrap">
+      <a class="e8-logo" href="#e8-home" aria-label="8度影院官方网站首页">
+        <span class="e8-logo-mark" aria-hidden="true"></span>
+        <span>8度影院<small>8DU CINEMA</small></span>
+      </a>
+      <nav class="e8-nav" aria-label="主导航">
+        <a href="#e8-home">首页</a>
+        <a href="#e8-focus">视频焦点</a>
+        <a href="#e8-special">专题企划</a>
+        <a href="#e8-creators">创作者</a>
+        <a href="#e8-news">企业动态</a>
+        <a href="#e8-help">帮助中心</a>
+        <a href="#e8-join">联系投稿</a>
+      </nav>
+      <div class="e8-header-tools">
+        <div class="e8-search">
+          <input type="search" id="e8SearchInput" placeholder="搜索作品、专题或创作者" aria-label="站内搜索">
+          <button type="button" id="e8SearchBtn" aria-label="提交搜索">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+          </button>
+          <div class="e8-search-hint" id="e8SearchHint">
+            <p>热门方向</p>
+            <div class="e8-chip-row" id="e8SearchChips">
+              <span class="e8-chip">城市夜拍</span>
+              <span class="e8-chip">纪录短片</span>
+              <span class="e8-chip">创作幕后</span>
+              <span class="e8-chip">光影人像</span>
+              <span class="e8-chip">独立导演</span>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="e8-btn e8-btn-main e8-btn-sm" id="e8SubmitTop">我要投稿</button>
+        <button type="button" class="e8-burger" id="e8Burger" aria-label="展开导航" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="e8-mnav" id="e8Mnav">
+      <ul>
+        <li><a href="#e8-home">首页</a></li>
+        <li><a href="#e8-focus">视频焦点</a></li>
+        <li><a href="#e8-hot">热门内容</a></li>
+        <li><a href="#e8-special">专题企划</a></li>
+        <li><a href="#e8-creators">创作者</a></li>
+        <li><a href="#e8-news">企业动态</a></li>
+        <li><a href="#e8-help">帮助中心</a></li>
+        <li><a href="#e8-join">联系投稿</a></li>
+      </ul>
+    </div>
+  </header>
+</div>
+
+<main>
+<!-- 首屏 -->
+<section class="e8-hero" id="e8-home">
+  <div class="e8-wrap">
+    <div class="e8-hero-grid">
+      <div>
+        <span class="e8-badge"><i></i>8度影院 · 官方网站 · 企业级影像品牌</span>
+        <h1>8度影院</h1>
+        <p class="e8-hero-slogan">用温度差一度的视角，记录每一帧真实的光</p>
+        <p class="e8-hero-lead">这里是 <strong>8度影院官方网站</strong>，一个由内容团队与创作者共同运营的影像品牌平台。我们相信好的影像不止于画面，更在于它承载的人与事。平台围绕纪录短片、城市影像、人物访谈与创作幕后展开，为观众提供高清正版的精品内容，为创作者提供稳定的内容生态与展示窗口。作为深耕影像垂直领域的品牌，8度影院坚持以匠心和创新打磨每一支作品，用真实与温暖回应用户的期待。</p>
+        <div class="e8-hero-acts">
+          <a class="e8-btn e8-btn-main" href="#e8-focus">浏览焦点影像</a>
+          <button type="button" class="e8-btn e8-btn-ghost" id="e8ShareTop">分享本站</button>
+        </div>
+        <div class="e8-stats">
+          <div><b data-count="1280">0</b><span>+</span><small>原创影像作品</small></div>
+          <div><b data-count="326">0</b><span>位</span><small>签约创作者</small></div>
+          <div><b data-count="92">0</b><span>%</span><small>用户年度留存</small></div>
+        </div>
+      </div>
+      <div class="e8-hero-visual">
+        <span class="e8-float-tag">本周主推</span>
+        <div class="e8-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d2740'/%3E%3Cstop offset='.55' stop-color='%231a4f5e'/%3E%3Cstop offset='1' stop-color='%23c47a3a'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23050c14' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23050c14' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Ccircle cx='600' cy='150' r='78' fill='%23ffd9a3' opacity='.85'/%3E%3Ccircle cx='600' cy='150' r='118' fill='none' stroke='%23ffd9a3' stroke-width='2' opacity='.35'/%3E%3Cpath d='M0 400 L120 330 L250 372 L380 300 L520 348 L640 282 L800 340 L800 500 L0 500Z' fill='%23081220' opacity='.9'/%3E%3Cpath d='M0 440 L150 396 L300 428 L460 372 L620 414 L800 380 L800 500 L0 500Z' fill='%23050b13'/%3E%3Crect x='80' y='120' width='16' height='150' fill='%231c2a38'/%3E%3Crect x='80' y='120' width='120' height='12' fill='%231c2a38'/%3E%3Ccircle cx='200' cy='126' r='10' fill='%23ffcf84'/%3E%3Crect width='800' height='500' fill='url(%23g2)'/%3E%3C/svg%3E" alt="城市夜色中亮起灯光的街角与远处落日，8度影院《城市夜行者》专题主视觉">
+          <div class="e8-frame-cap">
+            <h3>《城市夜行者》第 4 期：午夜十二点的便利店</h3>
+            <p>城市探索 · 纪录短片 · 时长 18:24</p>
+          </div>
+          <button type="button" class="e8-play" data-title="《城市夜行者》第 4 期：午夜十二点的便利店" aria-label="查看视频详情"></button>
+        </div>
+        <div class="e8-hero-mini">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Cdefs%3E%3ClinearGradient id='m1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b1f4b'/%3E%3Cstop offset='1' stop-color='%23a05a86'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='225' fill='url(%23m1)'/%3E%3Cg opacity='.8'%3E%3Crect x='40' y='120' width='22' height='105' fill='%23141123'/%3E%3Crect x='74' y='90' width='26' height='135' fill='%23141123'/%3E%3Crect x='112' y='140' width='18' height='85' fill='%23141123'/%3E%3Crect x='290' y='100' width='24' height='125' fill='%23141123'/%3E%3Crect x='326' y='130' width='20' height='95' fill='%23141123'/%3E%3C/g%3E%3Ccircle cx='240' cy='66' r='34' fill='%23f5d2ff' opacity='.9'/%3E%3Cpath d='M0 196 Q100 168 200 190 T400 182 L400 225 L0 225Z' fill='%230b0917'/%3E%3C/svg%3E" alt="紫色暮色下的城市天台轮廓，8度影院人物访谈《光的切片》封面">
+            <figcaption>《光的切片》人物访谈</figcaption>
+          </figure>
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Cdefs%3E%3ClinearGradient id='m2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23153a33'/%3E%3Cstop offset='1' stop-color='%2376b891'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='225' fill='url(%23m2)'/%3E%3Cpath d='M0 160 Q60 110 130 148 T260 132 T400 152 L400 225 L0 225Z' fill='%230c211c' opacity='.9'/%3E%3Ccircle cx='96' cy='62' r='24' fill='%23eafff3' opacity='.85'/%3E%3Cg stroke='%23dff8e8' stroke-width='2' opacity='.5'%3E%3Cpath d='M180 70 l0 -28'/%3E%3Cpath d='M210 74 l0 -22'/%3E%3Cpath d='M240 68 l0 -30'/%3E%3C/g%3E%3Crect x='272' y='96' width='70' height='52' rx='4' fill='%23f3fbf6' opacity='.18'/%3E%3C/svg%3E" alt="山野晨光与树影，8度影院自然纪录短片《山里的第一缕光》封面">
+            <figcaption>《山里的第一缕光》</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="e8-sec e8-about" id="e8-about">
+  <div class="e8-wrap">
+    <div class="e8-sec-head">
+      <div>
+        <span class="e8-sec-tag">Brand Insight</span>
+        <h2>关于 8度影院：一个<em>持续运营</em>的影像品牌</h2>
+      </div>
+      <p class="e8-sec-desc">从一支短片到一套内容生态，我们想讲清楚这个平台为什么存在，以及它将如何生长。</p>
+    </div>
+    <div class="e8-about-grid">
+      <div class="e8-prose">
+        <p>8度影院诞生于一个很朴素的判断：影像的价值，并不只取决于制作规模，而取决于它是否真诚地记录了某个具体的人、某个具体的时刻。我们把品牌命名为「8度」，是因为在影像的色温与情绪之间，往往存在一个微妙的差值——比炽热低一点，比冷淡高一点，恰好让人感到被理解。这个差值，就是 8度影院所有内容共同的气质。</p>
+        <p>作为<strong>8度影院官方网站</strong>，这里并不是一个简单的作品陈列页。我们围绕「内容—创作者—观众」三层结构搭建了整个平台：内容层由焦点影像、专题企划与热门流组成，保证每一次访问都有新鲜的高清内容可看；创作者层提供作者档案、创作手记与投稿通道，让优秀影像人被看见；观众层则通过点赞、收藏、评论与分享，让观看变成一次真实的交流。平台强调正版与原创，所有上架作品均经过内容审核与画质校验。</p>
+        <h3>我们在做什么</h3>
+        <p>8度影院当前的内容主线包括四条：其一，城市影像，以不同城市为坐标，记录街巷、夜市、通勤与独处者；其二，人物访谈，聚焦普通职业者的日常选择与坚持；其三，自然与户外纪录，关注季节、地貌与人的关系；其四，创作幕后，把镜头对准创作者本身，呈现一支短片从脚本到成片的全过程。四条主线交叉更新，形成一个多元而包容的内容矩阵。</p>
+        <p>我们同样重视内容的技术标准。平台对上传作品实行统一的画质与音量规范，鼓励创作者在构图、色彩与声音设计上多走一步。对于新加入的创作者，编辑团队会提供脚本建议、剪辑思路与标题优化等支持，帮助作品更好地抵达观众。我们相信，<strong>品质</strong>不是一句口号，而是由一次次具体的修改累积而成的。</p>
+        <h3>为什么值得信赖</h3>
+        <p>8度影院坚持长期主义。我们不追逐短期的流量热点，而是以季度为单位规划专题，以年度为单位沉淀品牌故事。平台建立了创作者分级与内容复核机制，确保每一支上架作品都经得起回看。与此同时，我们持续运营社区活动，包括季度创作挑战、年度影像投票与线下放映交流，让创作者与观众在屏幕之外也能相遇。截至目前，平台已与多家影像工作室、高校影视社团及独立导演建立合作，共同推动影像内容的公共价值。</p>
+        <p>面向未来，8度影院希望在三个方向上继续深耕：一是提升内容生态的开放性，让更多新人创作者获得起步机会；二是加强影像知识的科普，让普通观众也能读懂镜头语言；三是承担应有的社会责任，用影像记录值得被记住的人与事。我们始终认为，一个视频品牌真正的护城河，是它长期积累下来的<strong>口碑</strong>与信任。</p>
+      </div>
+      <aside>
+        <div class="e8-side-card">
+          <h4>内容品质自评维度</h4>
+          <p style="font-size:13px;color:var(--e8-muted);margin-bottom:6px">编辑团队每季度对在架作品进行一次抽样复核，以下为最近一期的综合评分。</p>
+          <div class="e8-gradebar"><span>画面质感</span><i class="g92"><b style="display:none">92</b></i><b>92</b></div>
+          <div class="e8-gradebar"><span>叙事完整</span><i class="g85"></i><b>85</b></div>
+          <div class="e8-gradebar"><span>声音设计</span><i class="g70"></i><b>70</b></div>
+          <div class="e8-gradebar"><span>原创程度</span><i class="g92"></i><b>92</b></div>
+        </div>
+        <div class="e8-side-card">
+          <h4>平台关键词</h4>
+          <ul class="e8-rule-list">
+            <li>官方网站公示内容规范，原创与正版优先</li>
+            <li>创作者分级机制，新人同样拥有推荐位</li>
+            <li>专题季度制，内容持续运营不中断</li>
+            <li>社区活动与线下放映，构建真实连接</li>
+            <li>用户至上，反馈 48 小时内响应</li>
+          </ul>
+        </div>
+        <div class="e8-side-card" style="background:linear-gradient(140deg,rgba(74,216,199,.14),rgba(155,140,255,.1));">
+          <h4>品牌一句话</h4>
+          <p style="font-size:13.5px;color:#cfdbe9;line-height:1.8">不追求最多，只想把每一帧做得更真一点。8度影院，陪你一起看清生活里的光。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 焦点内容 -->
+<section class="e8-sec" id="e8-focus">
+  <div class="e8-wrap">
+    <div class="e8-sec-head">
+      <div>
+        <span class="e8-sec-tag">Focus</span>
+        <h2>视频焦点：本周值得花时间看的<em>精品内容</em></h2>
+      </div>
+      <p class="e8-sec-desc">由编辑部从近期更新中挑选，兼顾影像质感与叙事表达。</p>
+    </div>
+    <div class="e8-focus-grid">
+      <article class="e8-card e8-focus-main">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">编辑部推荐</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b1a2b'/%3E%3Cstop offset='.5' stop-color='%23203f5e'/%3E%3Cstop offset='1' stop-color='%23e08b4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Cg opacity='.85'%3E%3Crect x='90' y='220' width='90' height='230' fill='%230d1a28'/%3E%3Crect x='200' y='160' width='70' height='290' fill='%230d1a28'/%3E%3Crect x='290' y='250' width='60' height='200' fill='%230d1a28'/%3E%3Crect x='470' y='190' width='80' height='260' fill='%230d1a28'/%3E%3Crect x='570' y='235' width='66' height='215' fill='%230d1a28'/%3E%3Crect x='650' y='175' width='70' height='275' fill='%230d1a28'/%3E%3C/g%3E%3Cg fill='%23ffd08a'%3E%3Crect x='104' y='240' width='12' height='14'/%3E%3Crect x='130' y='270' width='12' height='14'/%3E%3Crect x='212' y='190' width='12' height='14'/%3E%3Crect x='238' y='228' width='12' height='14'/%3E%3Crect x='302' y='272' width='12' height='14'/%3E%3Crect x='486' y='212' width='12' height='14'/%3E%3Crect x='516' y='252' width='12' height='14'/%3E%3Crect x='586' y='258' width='12' height='14'/%3E%3Crect x='666' y='200' width='12' height='14'/%3E%3C/g%3E%3Ccircle cx='400' cy='95' r='46' fill='%23ffe4b8' opacity='.9'/%3E%3Cpath d='M0 372 Q160 330 320 366 T800 356 L800 450 L0 450Z' fill='%23070e18'/%3E%3C/svg%3E" alt="夜色中的城市高楼与暖色窗灯，8度影院专题短片《晚班地铁的最后一节车厢》封面">
+          <span class="e8-thumb-dur">22:16</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《晚班地铁的最后一节车厢》：把城市人的疲惫拍成一首长镜头诗</a></h3>
+          <p>导演用 12 个夜晚跟拍末班地铁，车窗反光里是加班者、代驾司机和晚归的学生。全片几乎不设旁白，只保留车厢环境声与到站提示音，让城市自己说话。这是 8度影院城市影像线本季度的重点作品。</p>
+          <div class="e8-meta">
+            <span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#4ad8c7,#9fe8ff)">林</span>林砚舟</span>
+            <span>城市影像 · 纪录短片</span>
+            <span>11月17日更新</span>
+          </div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="1286"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>1286</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《晚班地铁的最后一节车厢》">评论</button>
+            <button type="button" class="e8-act e8-copy" data-title="《晚班地铁的最后一节车厢》">复制链接</button>
+          </div>
+        </div>
+      </article>
+      <div class="e8-focus-side">
+        <article class="e8-card">
+          <div class="e8-thumb">
+            <span class="e8-thumb-tag">人物访谈</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='f2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23253149'/%3E%3Cstop offset='1' stop-color='%238d6cc4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23f2)'/%3E%3Ccircle cx='200' cy='118' r='42' fill='%23efe4ff' opacity='.9'/%3E%3Cpath d='M120 300 Q120 200 200 200 Q280 200 280 300Z' fill='%23efe4ff' opacity='.75'/%3E%3Crect x='40' y='40' width='70' height='6' fill='%23ffffff' opacity='.3'/%3E%3Crect x='40' y='56' width='44' height='6' fill='%23ffffff' opacity='.2'/%3E%3C/svg%3E" alt="柔光中的访谈人物剪影，8度影院人物访谈《光的切片》第九集封面">
+            <span class="e8-thumb-dur">14:02</span>
+            <span class="e8-thumb-play"><i></i></span>
+          </div>
+          <div class="e8-card-body">
+            <h3><a href="#e8-creators">《光的切片》第九集：在暗房里工作了二十年的人</a></h3>
+            <p>他洗过上万卷胶片，记得每一款药的温度。</p>
+            <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#9b8cff,#f6c6ff)">苏</span>苏见山</span><span>人物访谈</span></div>
+            <div class="e8-card-foot">
+              <button type="button" class="e8-act e8-like" data-count="864"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>864</span></button>
+              <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button type="button" class="e8-act e8-comment" data-title="《光的切片》第九集">评论</button>
+            </div>
+          </div>
+        </article>
+        <article class="e8-card">
+          <div class="e8-thumb">
+            <span class="e8-thumb-tag">创作幕后</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='f3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233c2a12'/%3E%3Cstop offset='1' stop-color='%23e0a24c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='300' fill='url(%23f3)'/%3E%3Crect x='60' y='150' width='280' height='90' rx='10' fill='%231b1408' opacity='.85'/%3E%3Ccircle cx='110' cy='196' r='20' fill='%23f7e0b0' opacity='.8'/%3E%3Ccircle cx='160' cy='196' r='20' fill='%23f7e0b0' opacity='.55'/%3E%3Ccircle cx='210' cy='196' r='20' fill='%23f7e0b0' opacity='.75'/%3E%3Crect x='255' y='166' width='62' height='58' rx='5' fill='%23f7d69a' opacity='.5'/%3E%3Cpath d='M0 262 L400 250 L400 300 L0 300Z' fill='%23201609'/%3E%3C/svg%3E" alt="剪辑台上的分镜稿与暖色台灯，8度影院创作幕后《一支短片是如何被剪出来的》封面">
+            <span class="e8-thumb-dur">09:41</span>
+            <span class="e8-thumb-play"><i></i></span>
+          </div>
+          <div class="e8-card-body">
+            <h3><a href="#e8-hot">一支短片是怎么被剪出来的：从 40 小时素材到 9 分钟成片</a></h3>
+            <p>剪辑师公开了三版粗剪的时间线对比。</p>
+            <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#f0a043,#ffd9a3)">陈</span>陈述北</span><span>创作幕后</span></div>
+            <div class="e8-card-foot">
+              <button type="button" class="e8-act e8-like" data-count="742"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>742</span></button>
+              <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+              <button type="button" class="e8-act e8-comment" data-title="创作幕后《一支短片是如何被剪出来的》">评论</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 热门视频流 -->
+<section class="e8-sec e8-special" id="e8-hot">
+  <div class="e8-wrap">
+    <div class="e8-sec-head">
+      <div>
+        <span class="e8-sec-tag">Trending</span>
+        <h2>热门视频流：正在被讨论的<em>影像作品</em></h2>
+      </div>
+      <p class="e8-sec-desc">按标签筛选你感兴趣的方向，点击卡片可查看作品详情与创作者信息。</p>
+    </div>
+    <div class="e8-tabs" id="e8Tabs">
+      <button type="button" class="e8-tab active" data-filter="all">全部</button>
+      <button type="button" class="e8-tab" data-filter="city">城市影像</button>
+      <button type="button" class="e8-tab" data-filter="nature">自然户外</button>
+      <button type="button" class="e8-tab" data-filter="life">生活记录</button>
+      <button type="button" class="e8-tab" data-filter="craft">创作幕后</button>
+    </div>
+    <div class="e8-vgrid" id="e8Vgrid">
+
+      <article class="e8-card e8-vcard" data-tag="city">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">城市影像</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23122b3f'/%3E%3Cstop offset='1' stop-color='%235a7f9e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v1)'/%3E%3Cg stroke='%23c9e6f5' stroke-width='2' opacity='.55'%3E%3Cpath d='M0 200 L480 168'/%3E%3Cpath d='M0 224 L480 196'/%3E%3Cpath d='M0 176 L480 142'/%3E%3C/g%3E%3Cg fill='%23eaf6ff' opacity='.75'%3E%3Ccircle cx='90' cy='214' r='4'/%3E%3Ccircle cx='150' cy='206' r='3'/%3E%3Ccircle cx='230' cy='196' r='4'/%3E%3Ccircle cx='310' cy='188' r='3'/%3E%3Ccircle cx='392' cy='180' r='4'/%3E%3C/g%3E%3Crect x='0' y='236' width='480' height='34' fill='%230a1725' opacity='.9'/%3E%3C/svg%3E" alt="雨后的城市街道与倒影线条，8度影院作品《雨停之后，我在街口站了十分钟》封面">
+          <span class="e8-thumb-dur">07:36</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《雨停之后，我在街口站了十分钟》</a></h3>
+          <p>一场雨把路面变成镜子，也把行人变成剪影。</p>
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#4ad8c7,#a8f0e6)">周</span>周迴</span><span>11月16日</span></div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="512"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>512</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《雨停之后，我在街口站了十分钟》">评论</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="e8-card e8-vcard" data-tag="nature">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">自然户外</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23bfe6d2'/%3E%3Cstop offset='1' stop-color='%232b5d4a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v2)'/%3E%3Cpath d='M0 190 L90 130 L170 178 L260 112 L350 170 L480 128 L480 270 L0 270Z' fill='%23183f33'/%3E%3Cpath d='M0 226 L120 190 L230 220 L340 184 L480 214 L480 270 L0 270Z' fill='%230d2921'/%3E%3Ccircle cx='120' cy='64' r='28' fill='%23fff6d8' opacity='.9'/%3E%3Cg stroke='%23e8fff3' stroke-width='2' opacity='.6'%3E%3Cpath d='M300 96 q30 -26 60 0'/%3E%3Cpath d='M330 108 q24 -20 48 0'/%3E%3C/g%3E%3C/svg%3E" alt="薄雾山脊与清晨日光，8度影院自然纪录《山里的第一缕光》封面">
+          <span class="e8-thumb-dur">12:05</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《山里的第一缕光》：等了四个清晨才拍到这一分钟</a></h3>
+          <p>摄制组在海拔 2100 米处露营，只为一段雾散。</p>
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#7be0a8,#d9ffe9)">顾</span>顾野</span><span>11月15日</span></div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="934"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>934</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《山里的第一缕光》">评论</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="e8-card e8-vcard" data-tag="life">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">生活记录</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f5e3c8'/%3E%3Cstop offset='1' stop-color='%23c98a55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v3)'/%3E%3Crect x='0' y='200' width='480' height='70' fill='%2384502c' opacity='.85'/%3E%3Cellipse cx='150' cy='200' rx='64' ry='14' fill='%23371f10' opacity='.55'/%3E%3Crect x='110' y='150' width='80' height='52' rx='8' fill='%23fdf6ea'/%3E%3Cpath d='M120 150 q30 -34 60 0' fill='%23fdf6ea'/%3E%3Ccircle cx='330' cy='170' r='30' fill='%23fff4e0'/%3E%3Cpath d='M310 170 q20 -18 40 0' stroke='%23b9764a' stroke-width='4' fill='none'/%3E%3Crect x='300' y='196' width='62' height='8' rx='4' fill='%23452a15' opacity='.6'/%3E%3C/svg%3E" alt="木桌上冒着热气的茶杯与窗边微光，8度影院生活记录《一个人吃饭的第七年》封面">
+          <span class="e8-thumb-dur">06:18</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《一个人吃饭的第七年》：厨房里的小小秩序</a></h3>
+          <p>她把独居三餐拍成了有节奏的日常练习。</p>
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#f0a043,#ffe6bf)">温</span>温南</span><span>11月14日</span></div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="688"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>688</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《一个人吃饭的第七年》">评论</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="e8-card e8-vcard" data-tag="craft">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">创作幕后</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231b1c2b'/%3E%3Cstop offset='1' stop-color='%23514f7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v4)'/%3E%3Cg stroke='%237cf0e2' stroke-width='2' opacity='.7' fill='none'%3E%3Crect x='60' y='60' width='360' height='50' rx='6'/%3E%3Crect x='60' y='120' width='210' height='24' rx='4'/%3E%3Crect x='290' y='120' width='130' height='24' rx='4'/%3E%3Crect x='60' y='154' width='360' height='24' rx='4'/%3E%3Crect x='60' y='188' width='250' height='24' rx='4'/%3E%3C/g%3E%3Cg fill='%23f0a043'%3E%3Crect x='60' y='60' width='120' height='50' rx='6' opacity='.45'/%3E%3Crect x='60' y='120' width='150' height='24' rx='4' opacity='.35'/%3E%3C/g%3E%3C/svg%3E" alt="深色界面中的剪辑时间线分轨，8度影院创作幕后《剪辑台上的三版粗剪》封面">
+          <span class="e8-thumb-dur">16:47</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《剪辑台上的三版粗剪》：删掉一场戏之后</a></h3>
+          <p>从 32 分钟到 12 分钟，节奏是如何被重建的。</p>
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#9b8cff,#d6d0ff)">何</span>何与同</span><span>11月13日</span></div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="437"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>437</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《剪辑台上的三版粗剪》">评论</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="e8-card e8-vcard" data-tag="city">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">城市影像</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v5' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23351b2e'/%3E%3Cstop offset='1' stop-color='%23e8577f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v5)'/%3E%3Cg fill='%23120a12' opacity='.9'%3E%3Crect x='0' y='140' width='90' height='130'/%3E%3Crect x='100' y='100' width='70' height='170'/%3E%3Crect x='310' y='120' width='80' height='150'/%3E%3Crect x='400' y='160' width='80' height='110'/%3E%3C/g%3E%3Cg fill='%23ffd2e0' opacity='.85'%3E%3Crect x='14' y='158' width='10' height='10'/%3E%3Crect x='40' y='190' width='10' height='10'/%3E%3Crect x='116' y='124' width='10' height='10'/%3E%3Crect x='330' y='146' width='10' height='10'/%3E%3Crect x='420' y='184' width='10' height='10'/%3E%3C/g%3E%3Crect x='190' y='80' width='90' height='190' rx='4' fill='%23120a12' opacity='.85'/%3E%3Crect x='204' y='100' width='62' height='40' fill='%23ff7aa2' opacity='.8'/%3E%3C/svg%3E" alt="霓虹夜市中的招牌与人群光影，8度影院城市影像《夜市收摊前的最后半小时》封面">
+          <span class="e8-thumb-dur">10:52</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《夜市收摊前的最后半小时》</a></h3>
+          <p>从吆喝到安静，一条街的呼吸节奏被完整记录。</p>
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#f2688c,#ffd2e0)">路</span>路小满</span><span>11月12日</span></div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="799"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>799</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《夜市收摊前的最后半小时》">评论</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="e8-card e8-vcard" data-tag="life">
+        <div class="e8-thumb">
+          <span class="e8-thumb-tag">生活记录</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='v6' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23d8ecff'/%3E%3Cstop offset='1' stop-color='%235f86b0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23v6)'/%3E%3Crect x='40' y='70' width='180' height='130' rx='6' fill='%23f6fbff' opacity='.85'/%3E%3Crect x='58' y='88' width='144' height='94' rx='4' fill='%238fb3d6' opacity='.65'/%3E%3Crect x='250' y='120' width='190' height='16' rx='8' fill='%233a5772' opacity='.6'/%3E%3Crect x='250' y='150' width='150' height='16' rx='8' fill='%233a5772' opacity='.45'/%3E%3Crect x='250' y='180' width='170' height='16' rx='8' fill='%233a5772' opacity='.3'/%3E%3Cpath d='M0 236 L480 220 L480 270 L0 270Z' fill='%23334e6b' opacity='.9'/%3E%3C/svg%3E" alt="窗边书桌与摊开的笔记本，8度影院生活记录《把书桌搬到窗边以后》封面">
+          <span class="e8-thumb-dur">08:09</span>
+          <span class="e8-thumb-play"><i></i></span>
+        </div>
+        <div class="e8-card-body">
+          <h3><a href="#e8-hot">《把书桌搬到窗边以后》：我的写作时间变长了</a></h3>
+          <p>一次小规模的空间改造，带来了节奏的变化。</p>
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#8fb3d6,#e2f1ff)">许</span>许知言</span><span>11月11日</span></div>
+          <div class="e8-card-foot">
+            <button type="button" class="e8-act e8-like" data-count="356"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9.5A4 4 0 0112 7a4 4 0 017 3.5C19 15.5 12 20 12 20z"/></svg><span>356</span></button>
+            <button type="button" class="e8-act e8-save"><svg viewBox="0 0 24 24"><path d="M6 4h12v16l-6-4-6 4z"/></svg><span>收藏</span></button>
+            <button type="button" class="e8-act e8-comment" data-title="《把书桌搬到窗边以后》">评论</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="e8-empty" id="e8Empty">暂时没有匹配的内容，换个方向试试？</p>
+  </div>
+</section>
+
+<!-- 专题企划 -->
+<section class="e8-sec" id="e8-special">
+  <div class="e8-wrap">
+    <div class="e8-sec-head">
+      <div>
+        <span class="e8-sec-tag">Special</span>
+        <h2>专题企划：以季度为单位的<em>深度内容</em></h2>
+      </div>
+      <p class="e8-sec-desc">每个专题由编辑团队与创作者共同策划，持续更新，欢迎参与投票与讨论。</p>
+    </div>
+    <div class="e8-sp-grid">
+      <a class="e8-sp" href="#e8-hot">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f2233'/%3E%3Cstop offset='1' stop-color='%233d7a86'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='420' height='300' fill='url(%23s1)'/%3E%3Cg stroke='%23a9f0e4' stroke-width='2' opacity='.5' fill='none'%3E%3Cpath d='M40 240 L120 180 L200 214 L280 160 L380 206'/%3E%3Cpath d='M40 266 L140 224 L240 252 L340 212 L380 232'/%3E%3C/g%3E%3Ccircle cx='330' cy='76' r='30' fill='%23c8fff6' opacity='.8'/%3E%3Crect x='40' y='60' width='60' height='8' fill='%23ffffff' opacity='.35'/%3E%3Crect x='40' y='78' width='40' height='8' fill='%23ffffff' opacity='.2'/%3E%3C/svg%3E" alt="城市夜景与流动光线构成的专题封面，8度影院《城市夜行者》企划">
+        <span class="e8-sp-state live">更新中</span>
+        <div class="e8-sp-in">
+          <h3>城市夜行者</h3>
+          <p>在夜晚的城市里，谁还醒着？本专题跟拍末班交通、深夜食堂与通宵岗位，用镜头记录城市另一半的呼吸。</p>
+          <div class="e8-sp-meta"><span>已更新 4 期</span><span>12 支短片</span><span>参与讨论 2.4k</span></div>
+        </div>
+      </a>
+      <a class="e8-sp" href="#e8-creators">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Cdefs%3E%3ClinearGradient id='s2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a1c3f'/%3E%3Cstop offset='1' stop-color='%23b06ab3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='420' height='300' fill='url(%23s2)'/%3E%3Ccircle cx='210' cy='126' r='52' fill='%23f4e6ff' opacity='.85'/%3E%3Cpath d='M120 300 Q120 196 210 196 Q300 196 300 300Z' fill='%23f4e6ff' opacity='.6'/%3E%3Cg stroke='%23e9c8ff' stroke-width='2' opacity='.55'%3E%3Cpath d='M40 60 L120 60'/%3E%3Cpath d='M300 60 L380 60'/%3E%3Cpath d='M40 250 L380 250'/%3E%3C/g%3E%3C/svg%3E" alt="紫色光晕中的人物剪影，8度影院《光的切片》人物访谈企划">
+        <span class="e8-sp-state up">连载至第 9 集</span>
+        <div class="e8-sp-in">
+          <h3>光的切片</h3>
+          <p>每一个普通职业者身上，都有一段值得被完整听完的故事。本专题以长访谈形式，记录手艺、选择与坚持。</p>
+          <div class="e8-sp-meta"><span>人物访谈</span><span>9 集已上线</span><span>平均时长 14 分钟</span></div>
+        </div>
+      </a>
+      <a class="e8-sp" href="#e8-news">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 300'%3E%3Cdefs%3E%3ClinearGradient id='s3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231b2e22'/%3E%3Cstop offset='1' stop-color='%23a8c96b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='420' height='300' fill='url(%23s3)'/%3E%3Cpath d='M0 210 Q90 156 180 194 T420 176 L420 300 L0 300Z' fill='%230f1f16'/%3E%3Cpath d='M0 246 Q110 208 220 234 T420 218 L420 300 L0 300Z' fill='%23091610'/%3E%3Cg stroke='%23e6ffb8' stroke-width='2' opacity='.7'%3E%3Cpath d='M300 86 l0 -40'/%3E%3Cpath d='M330 94 l0 -34'/%3E%3Cpath d='M360 82 l0 -44'/%3E%3C/g%3E%3Crect x='50' y='64' width='76' height='8' fill='%23ffffff' opacity='.35'/%3E%3C/svg%3E" alt="绿色田野与远山轮廓，8度影院《四季田野笔记》自然企划">
+        <span class="e8-sp-state done">第一季完结</span>
+        <div class="e8-sp-in">
+          <h3>四季田野笔记</h3>
+          <p>用一年时间记录同一片田地的四时变化，从春耕到冬藏，观察土地与人的往复关系。</p>
+          <div class="e8-sp-meta"><span>自然户外</span><span>共 8 集</span><span>可整季回看</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 创作者矩阵 -->
+<section class="e8-sec" id="e8-creators" style="padding-top:20px">
+  <div class="e8-wrap">
+    <div class="e8-sec-head">
+      <div>
+        <span class="e8-sec-tag">Creators</span>
+        <h2>创作者矩阵：与 8度影院一同<em>持续创作</em>的人</h2>
+      </div>
+      <p class="e8-sec-desc">点击作者卡片可查看简介与合作方向。平台长期开放创作者申请。</p>
+    </div>
+    <div class="e8-cre-grid">
+
+      <div class="e8-cre">
+        <div class="e8-cre-ava" style="background:linear-gradient(135deg,#4ad8c7,#a2f4e8)">林</div>
+        <h3>林砚舟</h3>
+        <p class="e8-cre-field">城市影像 / 纪录短片</p>
+        <p>习惯在深夜出门，用最低的机位拍城市最真实的一面。代表作《晚班地铁的最后一节车厢》。</p>
+        <div class="e8-cre-stats">
+          <div><b>86</b>作品</div>
+          <div><b>12.4w</b>关注</div>
+        </div>
+        <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm e8-author-btn" data-author="林砚舟" data-field="城市影像 / 纪录短片" data-about="入行六年，前新闻摄影记者，现为独立导演。擅长以长镜头与环境声构建城市叙事，作品多次被影像展选映。">查看作者</button>
+      </div>
+
+      <div class="e8-cre">
+        <div class="e8-cre-ava" style="background:linear-gradient(135deg,#9b8cff,#e0d8ff)">苏</div>
+        <h3>苏见山</h3>
+        <p class="e8-cre-field">人物访谈 / 深度对谈</p>
+        <p>做过十年文字记者，转型影像后依然保持追问的习惯。访谈风格克制，问题狠。</p>
+        <div class="e8-cre-stats">
+          <div><b>54</b>作品</div>
+          <div><b>9.8w</b>关注</div>
+        </div>
+        <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm e8-author-btn" data-author="苏见山" data-field="人物访谈 / 深度对谈" data-about="喜欢在访谈开始前和对方聊半小时家常，正式开拍后通常只问三个问题。相信好的回答来自放松的沉默。">查看作者</button>
+      </div>
+
+      <div class="e8-cre">
+        <div class="e8-cre-ava" style="background:linear-gradient(135deg,#f0a043,#ffe3b8)">顾</div>
+        <h3>顾野</h3>
+        <p class="e8-cre-field">自然户外 / 风光纪录</p>
+        <p>一年有两百天在野外，装备清单比行程还长。擅长等待，也擅长在等待中保持安静。</p>
+        <div class="e8-cre-stats">
+          <div><b>73</b>作品</div>
+          <div><b>15.1w</b>关注</div>
+        </div>
+        <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm e8-author-btn" data-author="顾野" data-field="自然户外 / 风光纪录" data-about="曾为一个日出镜头在山上露营四次。拍摄之外喜欢研究气象与地形，认为自然是需要被耐心阅读的文本。">查看作者</button>
+      </div>
+
+      <div class="e8-cre">
+        <div class="e8-cre-ava" style="background:linear-gradient(135deg,#f2688c,#ffd3de)">温</div>
+        <h3>温南</h3>
+        <p class="e8-cre-field">生活记录 / 日常影像</p>
+        <p>把日子过成可以剪辑的节奏，喜欢自然光、旧家具和三分钟以内的短片。</p>
+        <div class="e8-cre-stats">
+          <div><b>112</b>作品</div>
+          <div><b>18.6w</b>关注</div>
+        </div>
+        <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm e8-author-btn" data-author="温南" data-field="生活记录 / 日常影像" data-about="独居第七年，坚持用影像记录一日三餐。作品多为碎片式短片，希望让人看到日常里的秩序感。">查看作者</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 故事随笔 + 榜单 -->
+<section class="e8-sec" id="e8-story">
+  <div class="e8-wrap">
+    <div class="e8-story-grid">
+      <div>
+        <div class="e8-sec-head" style="margin-bottom:18px">
+          <div>
+            <span class="e8-sec-tag">Notes</span>
+            <h2>创作者手记：镜头之外的<em>一些想法</em></h2>
+          </div>
+        </div>
+
+        <article class="e8-note">
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#4ad8c7,#a2f4e8)">林</span>林砚舟</span><span>11月17日</span><span>城市影像</span></div>
+          <h3><a href="#e8-focus">拍末班地铁时，我最先删掉的是旁白</a></h3>
+          <p>最初剪辑时我写了两千多字解说，录完听了一遍就全删了。车厢里本来就有声音：报站、刹车、起身的摩擦声，还有一个乘客小声打电话说「我快到了」。这些声音已经足够说明一切，我作为导演不需要再解释。后来我把麦克风放得更靠近地面，录那一声轻微的震动，它比任何音乐都更像一个疲惫的夜晚。</p>
+        </article>
+
+        <article class="e8-note">
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#f0a043,#ffe3b8)">顾</span>顾野</span><span>11月15日</span><span>自然户外</span></div>
+          <h3><a href="#e8-hot">等了四个清晨，我学会不催一座山</a></h3>
+          <p>第一天起雾太厚，第二天云层太高，第三天风太大把三脚架吹倒。第四天清晨五点二十，雾从谷底慢慢升起来，太阳刚好从脊线后面露出来，那一分钟里我几乎没有按快门，只是看。回到帐篷后我改了片子结构，把原本三分钟的日出剪成了五十秒。有时候少一点，才对得起那个等待的过程。</p>
+        </article>
+
+        <article class="e8-note">
+          <div class="e8-meta"><span class="e8-author"><span class="e8-ava" style="background:linear-gradient(135deg,#f2688c,#ffd3de)">温</span>温南</span><span>11月14日</span><span>生活记录</span></div>
+          <h3><a href="#e8-hot">一个人吃饭也可以很有仪式感，但这不需要表演</a></h3>
+          <p>有朋友问我拍三餐是不是在营造某种生活人设。其实不是。我只是想给自己留一份记录，证明这些平静的日子真的存在过。摆盘不总是好看，有时候就是一碗面加一个蛋。剪辑时我会保留所有翻车片段，因为那才是我真实的晚上。把生活拍得好看不难，难得是拍得诚实。</p>
+        </article>
+      </div>
+
+      <aside>
+        <div class="e8-rank">
+          <h3>本周热度榜</h3>
+          <p class="e8-rank-sub">按近七日播放、互动与完播综合排序</p>
+          <ol>
+            <li><a href="#e8-hot"><span class="e8-rk">1</span><span class="e8-rk-t">《晚班地铁的最后一节车厢》</span><span class="e8-rk-n">2.8w</span></a></li>
+            <li><a href="#e8-hot"><span class="e8-rk">2</span><span class="e8-rk-t">《山里的第一缕光》</span><span class="e8-rk-n">2.1w</span></a></li>
+            <li><a href="#e8-hot"><span class="e8-rk">3</span><span class="e8-rk-t">《光的切片》第九集</span><span class="e8-rk-n">1.9w</span></a></li>
+            <li><a href="#e8-hot"><span class="e8-rk">4</span><span class="e8-rk-t">《夜市收摊前的最后半小时》</span><span class="e8-rk-n">1.6w</span></a></li>
+            <li><a href="#e8-hot"><span class="e8-rk">5</span><span class="e8-rk-t">《一个人吃饭的第七年》</span><span class="e8-rk-n">1.4w</span></a></li>
+            <li><a href="#e8-hot"><span class="e8-rk">6</span><span class="e8-rk-t">《剪辑台上的三版粗剪》</span><span class="e8-rk-n">1.1w</span></a></li>
+          </ol>
+        </div>
+        <div class="e8-rank" style="margin-top:16px">
+          <h3>新人推荐榜</h3>
+          <p class="e8-rank-sub">近三十天首次投稿并表现亮眼的创作者</p>
+          <ol>
+            <li><a href="#e8-creators"><span class="e8-rk">1</span><span class="e8-rk-t">何与同 · 创作幕后</span><span class="e8-rk-n">+860</span></a></li>
+            <li><a href="#e8-creators"><span class="e8-rk">2</span><span class="e8-rk-t">路小满 · 城市影像</span><span class="e8-rk-n">+742</span></a></li>
+            <li><a href="#e8-creators"><span class="e8-rk">3</span><span class="e8-rk-t">许知言 · 生活记录</span><span class="e8-rk-n">+613</span></a></li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评价 -->
+<section class="e8-sec e8-review" id="e8-review">
+  <div class="e8-wrap">
+    <div class="e8-sec-head">
+      <div>
+        <span class="e8-sec-tag">Voices</span>
+        <h2>社区声音：来自观众与创作者的<em>真实反馈</em></h2>
+      </div>
+      <p class="e8-sec-desc">以下内容来自平台评论与活动回访问卷，已获授权展示。</p>
+    </div>
+    <div class="e8-bubbles">
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#4ad8c7,#a2f4e8)">阿</span><div><b>阿栖</b><span>观众 · 加入 2 年</span></div></div>
+        <p>很少有一个平台让我愿意把一部十几分钟的短片完整看完。这里的片子节奏不快，但每一支都有想说的话，看完不会觉得浪费时间。</p>
+        <span class="e8-bubble-topic"># 纪录片爱好者</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#f0a043,#ffe3b8)">程</span><div><b>程一舟</b><span>创作者 · 加入 1 年</span></div></div>
+        <p>第一次投稿时编辑给我写了八百多字的修改建议，从开场三秒到结尾字幕的停留时间都标了出来。这种认真在现在的平台里不多见。</p>
+        <span class="e8-bubble-topic"># 创作支持</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#9b8cff,#e0d8ff)">许</span><div><b>许暮</b><span>观众 · 加入 3 年</span></div></div>
+        <p>画质很稳定，声音也做得好。我是戴耳机看的，环境声层次很清楚，这一点比很多同类站点强。</p>
+        <span class="e8-bubble-topic"># 视听体验</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#f2688c,#ffd3de)">南</span><div><b>南屿</b><span>观众 · 加入 6 个月</span></div></div>
+        <p>专题策划是真的用心，一期能顺着看下去，不会看完一支就不知道点哪里。希望以后多做一些不同城市的。</p>
+        <span class="e8-bubble-topic"># 专题企划</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#7be0a8,#d9ffe9)">周</span><div><b>周临川</b><span>创作者 · 加入 2 年</span></div></div>
+        <p>参加过两季创作挑战，主题定得很具体，逼着我去想新东西。线下放映那次还认识了现在的搭档。</p>
+        <span class="e8-bubble-topic"># 社区活动</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#8fb3d6,#e2f1ff)">季</span><div><b>季然</b><span>观众 · 加入 1 年</span></div></div>
+        <p>喜欢这里的作者介绍做得清楚，看完片子能顺着找到同一个人其他作品，不会断掉。</p>
+        <span class="e8-bubble-topic"># 创作者档案</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#ffd9a3,#f0a043)">沈</span><div><b>沈小楼</b><span>学生 · 加入 4 个月</span></div></div>
+        <p>在影视社团里我们经常拿这里的幕后内容当教学素材，剪辑思路拆得很细，对新手非常友好。</p>
+        <span class="e8-bubble-topic"># 学习参考</span>
+      </div>
+
+      <div class="e8-bubble">
+        <div class="e8-bubble-top"><span class="e8-ava" style="background:linear-gradient(135deg,#e0d8ff,#9b8cff)">林</span><div><b>林间</b><span>观众 · 加入 2 年</span></div></div>
+        <p>反馈过一次播放问题，第二天就收到回复并修好了，这点让我挺意外也很放心。</p>
+        <span class="e8-bubble-topic"># 服务响应</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 企业动态 + FAQ -->
+<section class="e8-sec" id="e8-news">
+  <div class="e8-wrap">
+    <div class="e8-two-col">
+      <div>
+        <div class="e8-sec-head" style="margin-bottom:20px">
+          <div>
+            <span class="e8-sec-tag">News</span>
+            <h2>企业动态：<em>官方发布</em>与更新日志</h2>
+          </div>
+        </div>
+        <div class="e8-timeline">
+          <div class="e8-tl-item">
+            <small>2026 / 11 / 19</small>
+            <h3>「城市夜行者」第四期正式更新</h3>
+            <p>本期新增 6 支实拍短片与 3 篇创作手记，专题页同步开放投票环节，观众可选出最想看的下一站城市。</p>
+          </div>
+          <div class="e8-tl-item">
+            <small>2026 / 11 / 12</small>
+            <h3>企业合作：与 5 家影像工作室达成内容共建</h3>
+            <p>合作方将共同参与季度专题的选题策划与联合出品，首批合作短片预计于十二月陆续上线。</p>
+          </div>
+          <div class="e8-tl-item">
+            <small>2026 / 11 / 05</small>
+            <h3>平台功能更新：支持作品合集与章节跳转</h3>
+            <p>创作者可为系列作品建立合集，观众可在播放页按章节快速定位，提升长内容的观看体验。</p>
+          </div>
+          <div class="e8-tl-item">
+            <small>2026 / 10 / 28</small>
+            <h3>创作者招募开启：本期主题「我的日常 24 帧」</h3>
+            <p>面向所有用户开放报名，提交一支 3 至 8 分钟的原创短片即可参与，入选作品将获得首页推荐位。</p>
+          </div>
+          <div class="e8-tl-item">
+            <small>2026 / 10 / 16</small>
+            <h3>《光的切片》第一季收官，累计上线 9 集</h3>
+            <p>本季共访谈 9 位普通职业者，平均完播率 78%，第二季选题已进入筹备阶段。</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="e8-sec-head" style="margin-bottom:20px">
+          <div>
+            <span class="e8-sec-tag">FAQ</span>
+            <h2>帮助中心：常见问题解答</h2>
+          </div>
+        </div>
+        <div class="e8-faq" id="e8-help">
+          <details open>
+            <summary>8度影院是一个什么类型的平台？</summary>
+            <p>8度影院是一个以原创影像为核心的视频品牌平台，内容涵盖城市纪录、人物访谈、自然户外与创作幕后等方向，提供高清正版作品的观看与交流。</p>
+          </details>
+          <details>
+            <summary>如何申请成为平台创作者？</summary>
+            <p>点击页面上方的「我要投稿」或页面底部的投稿入口，按要求填写信息并提交作品链接即可。编辑团队会在 5 个工作日内完成初审并反馈。</p>
+          </details>
+          <details>
+            <summary>投稿作品有什么技术要求？</summary>
+            <p>建议分辨率不低于 1080p，画面比例 16:9 或 2.35:1，声音无明显爆音与底噪。作品需为原创或已取得完整授权，我们会在上架前进行内容与画质核验。</p>
+          </details>
+          <details>
+            <summary>平台的内容更新频率是怎样的？</summary>
+            <p>热门视频流保持每周 3 至 5 支新作品更新，专题企划通常按季度推进，重要节点会发布官方公告，你可以在页面顶部的公告条查看最新信息。</p>
+          </details>
+          <details>
+            <summary>如何参与社区的创作挑战与投票？</summary>
+            <p>每季度我们会发起一次创作挑战，主题与规则会在企业动态中公布。投票环节通常在专题页内进行，登录后即可参与。</p>
+          </details>
+          <details>
+            <summary>作品被收录后会有什么展示方式？</summary>
+            <p>入选作品将进入对应内容线，并有机会获得首页焦点位、专题推荐与创作者档案露出。我们也会为优质作品提供脚本与剪辑层面的优化建议。</p>
+          </details>
+          <details>
+            <summary>遇到播放或账号问题怎么反馈？</summary>
+            <p>可通过页面底部的联系邮箱或「反馈」按钮提交问题描述与截图，客服团队会在 48 小时内响应并跟进处理。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 联系/投稿 -->
+<section class="e8-sec" id="e8-join">
+  <div class="e8-wrap">
+    <div class="e8-join">
+      <div class="e8-join-grid">
+        <div>
+          <h2>把你的影像交给一个认真的平台</h2>
+          <p>8度影院长期开放投稿与合作通道。无论你是独立创作者、影像工作室，还是希望共建内容的企业伙伴，我们都愿意花时间看完你的作品。留下联系方式，编辑团队会尽快与你沟通。</p>
+          <form class="e8-join-form" id="e8JoinForm">
+            <input type="text" id="e8JoinName" placeholder="你的称呼" aria-label="你的称呼" required>
+            <input type="email" id="e8JoinMail" placeholder="联系邮箱" aria-label="联系邮箱" required>
+            <select id="e8JoinType" aria-label="合作类型">
+              <option value="投稿作品">我要投稿作品</option>
+              <option value="创作者入驻">创作者入驻</option>
+              <option value="品牌合作">品牌合作</option>
+              <option value="问题反馈">问题反馈</option>
+            </select>
+            <button type="submit" class="e8-btn e8-btn-main" style="flex:none">提交</button>
+          </form>
+        </div>
+        <div class="e8-join-info">
+          <ul>
+            <li><b>邮箱</b><span>hello@8du-cinema.com（仅用于合作与投稿沟通）</span></li>
+            <li><b>合作</b><span>影像联合出品、专题共建、线下放映场地合作</span></li>
+            <li><b>投稿</b><span>原创短片、系列企划、创作手记均可提交</span></li>
+            <li><b>响应</b><span>工作日 48 小时内回复，节假日顺延</span></li>
+            <li><b>分享</b><span>欢迎把喜欢的作品分享给朋友，让好内容被更多人看见</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 页脚 -->
+<footer class="e8-footer">
+  <div class="e8-wrap">
+    <div class="e8-foot-grid">
+      <div class="e8-foot-brand">
+        <a class="e8-logo" href="#e8-home">
+          <span class="e8-logo-mark" aria-hidden="true"></span>
+          <span>8度影院<small>8DU CINEMA</small></span>
+        </a>
+        <p>8度影院官方网站，深耕原创影像的垂直领域视频品牌。我们持续运营内容生态，以匠心打磨每一支作品，用真实与温暖陪伴每一位观众与创作者。</p>
+        <div class="e8-social">
+          <span title="微信公众号">微信</span>
+          <span title="微博">微博</span>
+          <span title="视频号">视频</span>
+          <span title="邮件联系">邮件</span>
+        </div>
+      </div>
+      <div class="e8-foot-col">
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#e8-focus">视频焦点</a></li>
+          <li><a href="#e8-hot">热门视频流</a></li>
+          <li><a href="#e8-special">专题企划</a></li>
+          <li><a href="#e8-story">创作者手记</a></li>
+        </ul>
+      </div>
+      <div class="e8-foot-col">
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#e8-about">品牌故事</a></li>
+          <li><a href="#e8-creators">创作者矩阵</a></li>
+          <li><a href="#e8-news">企业动态</a></li>
+          <li><a href="#e8-help">帮助中心</a></li>
+        </ul>
+      </div>
+      <div class="e8-foot-col">
+        <h4>联系与投稿</h4>
+        <ul>
+          <li>合作邮箱：hello@8du-cinema.com</li>
+          <li>投稿通道：<a href="#e8-join">在线提交</a></li>
+          <li>内容反馈：<a href="#e8-join">问题反馈</a></li>
+          <li>工作时间：周一至周五 10:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="e8-foot-bottom">
+      <span>© 2026 8度影院 官方网站 · 版权所有 · 持续运营中</span>
+      <div class="e8-foot-links">
+        <a href="#e8-about">品牌介绍</a>
+        <a href="#e8-help">使用帮助</a>
+        <a href="#e8-join">联系我们</a>
+        <span>内容版权归原创作者与平台共同所有</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="e8-top" id="e8Top" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V6"/><path d="M6 12l6-6 6 6"/></svg>
+</button>
+
+<div class="e8-toast" id="e8Toast" role="status" aria-live="polite"></div>
+
+<!-- 评论弹窗 -->
+<div class="e8-modal" id="e8CommentModal">
+  <div class="e8-modal-box e8-modal-wrap">
+    <button type="button" class="e8-modal-close" data-close aria-label="关闭">×</button>
+    <h3 id="e8CommentTitle">作品讨论</h3>
+    <p class="e8-modal-sub">来自社区的观后感与交流，友善表达是这里的共识。</p>
+    <div id="e8CommentList"></div>
+    <div class="e8-field" style="margin-top:14px">
+      <label for="e8CommentInput">写下你的看法</label>
+      <textarea id="e8CommentInput" placeholder="说说这支作品打动你的地方……"></textarea>
+    </div>
+    <div class="e8-modal-acts">
+      <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm" data-close>取消</button>
+      <button type="button" class="e8-btn e8-btn-main e8-btn-sm" id="e8CommentSend">发表</button>
+    </div>
+  </div>
+</div>
+
+<!-- 作者弹窗 -->
+<div class="e8-modal" id="e8AuthorModal">
+  <div class="e8-modal-box e8-modal-wrap">
+    <button type="button" class="e8-modal-close" data-close aria-label="关闭">×</button>
+    <h3 id="e8AuthorName">创作者</h3>
+    <p class="e8-modal-sub" id="e8AuthorField">擅长领域</p>
+    <p id="e8AuthorAbout" style="font-size:13.5px;color:#b6c3d6;line-height:1.8"></p>
+    <div class="e8-modal-acts">
+      <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm" data-close>关闭</button>
+      <button type="button" class="e8-btn e8-btn-main e8-btn-sm" id="e8AuthorFollow">关注该作者</button>
+    </div>
+  </div>
+</div>
+
+<!-- 投稿弹窗 -->
+<div class="e8-modal" id="e8SubmitModal">
+  <div class="e8-modal-box e8-modal-wrap">
+    <button type="button" class="e8-modal-close" data-close aria-label="关闭">×</button>
+    <h3>提交你的作品</h3>
+    <p class="e8-modal-sub">填写基本信息，编辑团队将在 5 个工作日内完成初审。</p>
+    <div class="e8-field"><label for="e8SubTitle">作品标题</label><input type="text" id="e8SubTitle" placeholder="例如：城市夜行者 · 我的街区"></div>
+    <div class="e8-field"><label for="e8SubType">内容方向</label>
+      <select id="e8SubType">
+        <option>城市影像</option>
+        <option>人物访谈</option>
+        <option>自然户外</option>
+        <option>生活记录</option>
+        <option>创作幕后</option>
+      </select>
+    </div>
+    <div class="e8-field"><label for="e8SubMail">联系邮箱</label><input type="email" id="e8SubMail" placeholder="用于接收审核结果"></div>
+    <div class="e8-field"><label for="e8SubDesc">作品简介</label><textarea id="e8SubDesc" placeholder="简单介绍拍摄背景与表达意图"></textarea></div>
+    <div class="e8-modal-acts">
+      <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm" data-close>取消</button>
+      <button type="button" class="e8-btn e8-btn-main e8-btn-sm" id="e8SubmitSend">提交稿件</button>
+    </div>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="e8-modal" id="e8ShareModal">
+  <div class="e8-modal-box e8-modal-wrap">
+    <button type="button" class="e8-modal-close" data-close aria-label="关闭">×</button>
+    <h3>分享给朋友</h3>
+    <p class="e8-modal-sub">把喜欢的内容传递出去，让好作品被更多人看见。</p>
+    <div class="e8-share-row">
+      <button type="button" data-share="微信">微信</button>
+      <button type="button" data-share="微博">微博</button>
+      <button type="button" data-share="QQ">QQ</button>
+      <button type="button" data-share="复制链接">复制链接</button>
+    </div>
+    <div class="e8-modal-acts">
+      <button type="button" class="e8-btn e8-btn-ghost e8-btn-sm" data-close>关闭</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var $ = function(s, p){ return (p || document).querySelector(s); };
+  var $$ = function(s, p){ return Array.prototype.slice.call((p || document).querySelectorAll(s)); };
+
+  /* ---------- Toast ---------- */
+  var toastEl = $('#e8Toast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = $('#e8Burger');
+  var mnav = $('#e8Mnav');
+  burger.addEventListener('click', function(){
+    var open = mnav.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  $$('#e8Mnav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mnav.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+    });
+  });
+
+  /* ---------- 搜索 ---------- */
+  var searchInput = $('#e8SearchInput');
+  var searchBtn = $('#e8SearchBtn');
+  var searchHint = $('#e8SearchHint');
+  var allChipWords = ['城市夜拍','纪录短片','创作幕后','光影人像','独立导演','自然户外','生活记录','人物访谈'];
+
+  searchInput.addEventListener('focus', function(){ searchHint.classList.add('show'); });
+  searchInput.addEventListener('input', function(){
+    var kw = this.value.trim();
+    if(!kw){ searchHint.classList.add('show'); return; }
+    var hits = allChipWords.filter(function(w){ return w.indexOf(kw) > -1; });
+    var box = $('#e8SearchChips');
+    box.innerHTML = '';
+    if(hits.length === 0){
+      var p = document.createElement('span');
+      p.className = 'e8-chip';
+      p.textContent = '暂无匹配，试试「城市夜拍」';
+      box.appendChild(p);
+    } else {
+      hits.forEach(function(w){
+        var s = document.createElement('span');
+        s.className = 'e8-chip';
+        s.textContent = w;
+        box.appendChild(s);
+      });
+    }
+    searchHint.classList.add('show');
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.e8-search')) searchHint.classList.remove('show');
+  });
+  $('#e8SearchChips').addEventListener('click', function(e){
+    var chip = e.target.closest('.e8-chip');
+    if(!chip) return;
+    var w = chip.textContent;
+    if(w.indexOf('暂无匹配') > -1) return;
+    searchInput.value = w;
+    doSearch(w);
+  });
+  function doSearch(kw){
+    searchHint.classList.remove('show');
+    var map = {
+      '城市夜拍':'city','纪录短片':'city','光影人像':'nature','独立导演':'craft',
+      '创作幕后':'craft','自然户外':'nature','生活记录':'life','人物访谈':'life'
+    };
+    var tag = map[kw];
+    if(tag){
+      var tab = $('.e8-tab[data-filter="' + tag + '"]');
+      if(tab) tab.click();
+      toast('已为你筛选「' + kw + '」相关内容');
+    } else {
+      toast('暂未找到与「' + kw + '」匹配的内容');
+    }
+  }
+  searchBtn.addEventListener('click', function(){
+    var kw = searchInput.value.trim();
+    if(!kw){ toast('输入关键词，例如「城市夜拍」'); return; }
+    doSearch(kw);
+  });
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); searchBtn.click(); }
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var tabs = $$('#e8Tabs .e8-tab');
+  var cards = $$('#e8Vgrid .e8-vcard');
+  var emptyEl = $('#e8Empty');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      tab.classList.add('active');
+      var f = tab.getAttribute('data-filter');
+      var shown = 0;
+      cards.forEach(function(c){
+        var ok = (f === 'all' || c.getAttribute('data-tag') === f);
+        c.classList.toggle('hide', !ok);
+        if(ok) shown++;
+      });
+      emptyEl.classList.toggle('show', shown === 0);
+    });
+  });
+
+  /* ---------- 点赞 ---------- */
+  $$('.e8-like').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = btn.querySelector('span');
+      var n = parseInt(btn.getAttribute('data-count'), 10) || 0;
+      if(btn.classList.contains('on')){
+        btn.classList.remove('on');
+        n = Math.max(0, n - 1);
+        btn.setAttribute('data-count', n);
+        numEl.textContent = n;
+        toast('已取消点赞');
+      } else {
+        btn.classList.add('on');
+        n = n + 1;
+        btn.setAttribute('data-count', n);
+        numEl.textContent = n;
+        toast('感谢你的认可');
+      }
+    });
+  });
+
+  /* ---------- 收藏 ---------- */
+  $$('.e8-save').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('on');
+      var txt = btn.querySelector('span');
+      txt.textContent = on ? '已收藏' : '收藏';
+      toast(on ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  function copyText(text, okMsg){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast(okMsg); }).catch(function(){ toast('复制失败，请手动选择'); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); toast(okMsg); }catch(err){ toast('复制失败，请手动选择'); }
+      document.body.removeChild(ta);
+    }
+  }
+  $$('.e8-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var t = btn.getAttribute('data-title') || '8度影院';
+      copyText(t + ' · 8度影院', '作品信息已复制');
+    });
+  });
+
+  /* ---------- 弹窗通用 ---------- */
+  var modals = $$('.e8-modal');
+  function openModal(el){
+    modals.forEach(function(m){ m.classList.remove('open'); });
+    el.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModals(){
+    modals.forEach(function(m){ m.classList.remove('open'); });
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    if(e.target.closest('[data-close]')) closeModals();
+    if(e.target.classList.contains('e8-modal')) closeModals();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModals();
+  });
+
+  /* ---------- 评论弹窗 ---------- */
+  var commentSeed = [
+    {name:'夜航船', time:'2 小时前', text:'看到结尾那盏灯灭掉的时候突然有点鼻酸，很克制但很有力量。'},
+    {name:'木木', time:'5 小时前', text:'环境声处理得太好了，戴耳机看完全是另一种体验。'},
+    {name:'小岑', time:'昨天', text:'喜欢这种不解释太多的拍法，留给观众自己想。'}
+  ];
+  var commentModal = $('#e8CommentModal');
+  var commentList = $('#e8CommentList');
+  var commentTitle = $('#e8CommentTitle');
+
+  function renderComments(list){
+    commentList.innerHTML = '';
+    list.forEach(function(c){
+      var d = document.createElement('div');
+      d.className = 'e8-dialog';
+      d.innerHTML = '<span class="e8-ava" style="background:linear-gradient(135deg,#4ad8c7,#a2f4e8)">' + c.name.charAt(0) + '</span>' +
+        '<div><b>' + c.name + '</b><span>' + c.time + '</span><p>' + c.text + '</p></div>';
+      commentList.appendChild(d);
+    });
+  }
+  renderComments(commentSeed);
+
+  $$('.e8-comment').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var t = btn.getAttribute('data-title') || '作品讨论';
+      commentTitle.textContent = '《' + t.replace(/^《|》$/g, '') + '》讨论区';
+      renderComments(commentSeed.slice());
+      openModal(commentModal);
+      setTimeout(function(){ $('#e8CommentInput').focus(); }, 120);
+    });
+  });
+  $('#e8CommentSend').addEventListener('click', function(){
+    var v = $('#e8CommentInput').value.trim();
+    if(!v){ toast('写点什么再发表吧'); return; }
+    commentSeed.unshift({name:'我', time:'刚刚', text:v});
+    renderComments(commentSeed);
+    $('#e8CommentInput').value = '';
+    toast('评论已发布');
+  });
+
+  /* ---------- 作者弹窗 ---------- */
+  var authorModal = $('#e8AuthorModal');
+  $$('.e8-author-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      $('#e8AuthorName').textContent = btn.getAttribute('data-author') || '创作者';
+      $('#e8AuthorField').textContent = btn.getAttribute('data-field') || '擅长领域';
+      $('#e8AuthorAbout').textContent = btn.getAttribute('data-about') || '';
+      var follow = $('#e8AuthorFollow');
+      follow.textContent = '关注该作者';
+      follow.classList.remove('on');
+      openModal(authorModal);
+    });
+  });
+  $('#e8AuthorFollow').addEventListener('click', function(){
+    var on = this.classList.toggle('on');
+    this.textContent = on ? '已关注' : '关注该作者';
+    toast(on ? '已关注该作者' : '已取消关注');
+  });
+
+  /* ---------- 投稿弹窗 ---------- */
+  var submitModal = $('#e8SubmitModal');
+  function openSubmit(){
+    openModal(submitModal);
+  }
+  $('#e8SubmitTop').addEventListener('click', openSubmit);
+  $('#e8SubmitSend').addEventListener('click', function(){
+    var t = $('#e8SubTitle').value.trim();
+    var m = $('#e8SubMail').value.trim();
+    if(!t){ toast('请填写作品标题'); return; }
+    if(!m || m.indexOf('@') < 0){ toast('请填写有效的联系邮箱'); return; }
+    closeModals();
+    toast('稿件已提交，编辑团队将在 5 个工作日内反馈');
+    $('#e8SubTitle').value = '';
+    $('#e8SubMail').value = '';
+    $('#e8SubDesc').value = '';
+  });
+
+  /* ---------- 分享弹窗 ---------- */
+  var shareModal = $('#e8ShareModal');
+  function openShare(){ openModal(shareModal); }
+  $('#e8ShareTop').addEventListener('click', openShare);
+  $$('[data-share]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var ch = b.getAttribute('data-share');
+      if(ch === '复制链接'){
+        copyText('8度影院 · 原创影像内容社区', '链接已复制，去分享给朋友吧');
+      } else {
+        toast('已准备分享到' + ch + '，请在应用中完成');
+      }
+      closeModals();
+    });
+  });
+
+  /* ---------- 联系表单 ---------- */
+  $('#e8JoinForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = $('#e8JoinName').value.trim();
+    var m = $('#e8JoinMail').value.trim();
+    var ty = $('#e8JoinType').value;
+    if(!n){ toast('请填写你的称呼'); return; }
+    if(!m || m.indexOf('@') < 0){ toast('请填写有效的联系邮箱'); return; }
+    toast('已收到你的「' + ty + '」申请，我们会尽快联系');
+    this.reset();
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = $('#e8Top');
+  window.addEventListener('scroll', function(){
+    topBtn.classList.toggle('show', window.scrollY > 420);
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counted = false;
+  function countUp(){
+    if(counted) return;
+    var stats = $$('.e8-stats b[data-count]');
+    if(stats.length === 0) return;
+    counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var start = performance.now();
+      var dur = 1300;
+      function step(now){
+        var p = Math.min((now - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toLocaleString('zh-CN');
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  window.addEventListener('scroll', function(){
+    var hero = $('#e8-home');
+    if(hero && window.scrollY + window.innerHeight > hero.offsetHeight * 0.4) countUp();
+  }, {passive:true});
+  setTimeout(countUp, 600);
+
+  /* ---------- 直播播放按钮提示 ---------- */
+  $$('.e8-play, .e8-thumb-play').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var card = el.closest('.e8-card') || el.closest('.e8-frame');
+      var title = '';
+      if(card){
+        var h = card.querySelector('h3');
+        if(h) title = h.textContent.trim();
+      }
+      if(!title && el.getAttribute('data-title')) title = el.getAttribute('data-title');
+      toast(title ? '《' + title.replace(/^《|》$/g,'') + '》详情页正在加载' : '作品详情页正在加载');
+    });
+  });
+
+})();
+</script>
+</body>
+  </html>
